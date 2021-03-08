@@ -1,0 +1,14 @@
+WHOA_LIB_COLOR_WHITE  = "ffffff"
+WHOA_LIB_COLOR_GREEN  = "00ff00"
+WHOA_LIB_COLOR_BLUE   = "69ccf0"
+WHOA_LIB_COLOR_RED    = "ff0000"
+WHOA_LIB_COLOR_GOLD   = "ffd700"
+WHOA_LIB_COLOR_GREY   = "acacac"
+WHOA_LIB_COLOR_ORANGE = "ff7d0a"
+WHOA_LIB_COLOR_YELLOW = WHOA_LIB_COLOR_GOLD
+
+WHOA_LIB_COLOR_ADDON  = WHOA_LIB_COLOR_GREY
+
+------------------------------
+WHOA_LIB_COLORS_LOADED = true
+------------------------------
