@@ -69,7 +69,7 @@ function whoaLibrary_createDropDown(name, array, x, y, label, cvar, save, update
             info.value = v
             info.func = function(self)
                 save(self.value)
-                _G[n.."Text"]:SetText(self:GetText())
+                _G[name.."Text"]:SetText(self:GetText())
                 update()
             end
             info.checked = v == cvar()
