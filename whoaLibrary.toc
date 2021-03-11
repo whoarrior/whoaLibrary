@@ -2,7 +2,7 @@
 ## Title: whoa |cff69ccf0Library|r
 ## Notes: A library for all whoa AddOns.
 ## Author: whoa
-## Version: 9.0.5.1
+## Version: 9.0.5.2
 
 colors.lua
 frames.lua
