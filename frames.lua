@@ -31,16 +31,16 @@ function whoaLibrary_createFrame(spec, parent, point, xOffset, yOffset, width, a
     f.text:SetJustifyH(alignment)
 end
 
-function whoaLibrary_createButton(width, x, y, label, onClick)
-    local o = CreateFrame("Button", nil, whoaCharacterStats.optionPanel, "UIPanelButtonTemplate")
+function whoaLibrary_createButton(parent, width, x, y, label, onClick)
+    local o = CreateFrame("Button", nil, parent, "UIPanelButtonTemplate")
     o:SetSize(width, BTN_HEIGHT)
     o:SetText(label)
     o:SetPoint(ANCHOR, x, y)
     o:SetScript("OnClick", onClick)
 end
 
-function whoaLibrary_createCheckButton(name, x, y, label, desc, cvar, onClick)
-    local o = CreateFrame("CheckButton", name, whoaCharacterStats.optionPanel, "InterfaceOptionsCheckButtonTemplate")
+function whoaLibrary_createCheckButton(name, parent, x, y, label, desc, cvar, onClick)
+    local o = CreateFrame("CheckButton", name, parent, "InterfaceOptionsCheckButtonTemplate")
     o:SetScript("OnClick", function(self)
         local tick = self:GetChecked()
         onClick(self, tick and true or false)
@@ -58,9 +58,9 @@ function whoaLibrary_createCheckButton(name, x, y, label, desc, cvar, onClick)
     o:SetPoint(ANCHOR, x, y)
 end
 
-function whoaLibrary_createDropDown(name, array, x, y, label, cvar, save, update)
+function whoaLibrary_createDropDown(name, parent, array, x, y, label, cvar, save, update)
     local info = {}
-    local o = CreateFrame("Frame", name, whoaCharacterStats.optionPanel, "UIDropDownMenuTemplate")
+    local o = CreateFrame("Frame", name, parent, "UIDropDownMenuTemplate")
     o:SetPoint(ANCHOR, x, y)
     o.initialize = function()
         wipe(info)
@@ -83,8 +83,8 @@ function whoaLibrary_createDropDown(name, array, x, y, label, cvar, save, update
     oLabel:SetText(label)
 end
 
-function whoaLibrary_createSlider(name, label, percent, x, y, min, max, update)
-    local o = CreateFrame("Slider", name, whoaCharacterStats.optionPanel, "HorizontalSliderTemplate")
+function whoaLibrary_createSlider(name, parent, label, percent, x, y, min, max, update)
+    local o = CreateFrame("Slider", name, parent, "HorizontalSliderTemplate")
     o:SetPoint(ANCHOR, x, y)
     o:SetSize(170, 16)
     o:SetMinMaxValues(min, max)
