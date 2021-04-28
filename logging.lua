@@ -6,7 +6,8 @@ local LOGLEVEL = {
     DEBUG = 4,
 }
 
-WHOA_LIB_LOGLEVEL_CHARSTATS = "INFO"
+WHOA_LIB_LOGLEVEL_CHARSTATS = "DEBUG"
+WHOA_LIB_LOGLEVEL_STANDARDUI = "DEBUG"
 
 -- # msg    = the message that should be logged
 -- # lvl    = the level of that message
